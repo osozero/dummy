@@ -7,7 +7,8 @@
     stages{
       stage('Checkout'){
         steps{
-       checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'GitCredebtials', url: 'https://mercury.tfs.siemens.net/tfs/IDT/Cranes/_git/cr.cms']]])
+       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/osozero/dummy.git']]])
+
         }
         }
     }
